@@ -3,10 +3,8 @@ import os
 import shutil
 import sys
 
-
 def obter_nome_usuario_windows():
     return os.environ.get('USERNAME')
-
 
 def mover_executavel_para_pasta_destino(pasta_destino):
     try:
@@ -24,8 +22,7 @@ def mover_executavel_para_pasta_destino(pasta_destino):
         print(f"Erro ao mover o executável: {e}")
 
 
-# Substitua 'C:\\Caminho\\Para\\Sua\\Pasta\\Destino' pelo caminho da pasta desejada
 nome_usuario = obter_nome_usuario_windows()
-pasta_destino = rf'C:\Users\{nome_usuario}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup'
+pasta_destino = rf'C:\Users\{nome_usuario}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup' #Este Caminho é um exemplo, pode substituí-lo por qualquer outro que desejar
 mover_executavel_para_pasta_destino(pasta_destino)
 
